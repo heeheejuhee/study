@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Css Targetting</title>
+	<style type="text/css">
+		.red {
+			background-color:red;
+		}
+		.yellow {
+			background-color:yellow;
+		}
+		.red.yellow {
+			background-color:orange;
+		}
+		.red .yellow {
+			background-color:green;
+		}
+
+		button, .btn {
+			padding:10px 20px;
+			background-color:white;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size:12px;
+			font-family:helvetica, arial, sans-serif;
+			font-weight:100;
+			border:1px solid dodgerblue;
+			color:dodgerblue;
+		}
+		.home button, .home .btn {
+			background-color:black;
+			color:white;
+		}
+		.home button.red {
+			background-color:red;
+		}
+
+
+	</style>
+</head>
+<body>
+	<p class="red">I'm red</p>
+	<p class="yellow">I'm yellow</p>
+	<p class="red yellow">I'm orange</p>
+
+	<div class="red">
+		i'm red
+		<div class="yellow">
+			i'm green
+		</div>
+	</div>
+
+	<br><br>
+
+	<div>
+		<button>Button</button>
+	</div>
+	<div class="home">
+		<a class="btn" href="">Button</a>
+		<button>Button</button>
+		<button class="red">RedButton</button>
+	</div>
+</body>
+</html>

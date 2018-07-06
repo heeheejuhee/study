@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nth-child</title>
+	<style type="text/css">
+		.list li:first-child {
+			font-size:30px;
+		}
+		.list li:last-child {
+			font-size:40px;
+		}
+		.list li:nth-child(3) {
+			font-weight:bold;
+		}
+		.list li:nth-child(n*2) {
+			color:red;
+		}
+		.list li:nth-child(even){
+			color:grey;
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+	</ul>
+</body>
+</html>
