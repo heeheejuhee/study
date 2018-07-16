@@ -28,38 +28,39 @@
 
             //Console log the array
             console.log("Answer 1");
-            console.log();
+            console.log(array);
             console.log("---------------");
 
             //Console log the 3rd array element (3)
             console.log("Answer 2");
-            console.log();
+            console.log(array[2]);
             console.log("---------------");
 
             //Console log 1234abcd as string
             console.log("Answer 3");
-            console.log();
+            console.log(array.join("♡"));
             console.log("---------------");
             
             //Remove the last element and console log the value ("d")
             console.log("Answer 4");
-            console.log();
+            console.log(array.pop());
             console.log("---------------");
 
             //Remove the first element and console log the value (1)
             console.log("Answer 5");
-            console.log();
+            console.log(array.shift());
             console.log("---------------");
 
 
             //Console log the index of "c"
             console.log("Answer 6");
-            console.log();
+            console.log(array);
+            console.log(array.indexOf(4));
             console.log("---------------");
 
             //Console log cba432
             console.log("Answer 7");
-            console.log();
+            console.log(array.reverse().join(""));
             console.log("---------------");
 
             //---------------------------------------------------------------------------------
@@ -68,12 +69,14 @@
 
             //Console log a new array created from countries' 4 ~ 6 elements ('Denmark', 'Egypt', 'France')
             console.log("Answer 8");
-            console.log();
+            console.log(countries);
+            console.log(countries.slice(3,6));
             console.log("---------------");
 
             //Console log countries with additional array list 'Greece' at the end
             console.log("Answer 9");
-            console.log();
+            console.log(countries.push("Greece"));
+            console.log(countries)
             console.log("---------------");
 
             //---------------------------------------------------------------------------------
@@ -81,7 +84,9 @@
 
             //Filter numbers higher than 10
             console.log("Answer 10");
-            console.log();
+            console.log(numbers.filter(function(number){
+            	return number >12
+            }));
             console.log("---------------");
         </script>
     </body>
