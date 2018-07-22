@@ -43,11 +43,11 @@
         // task 1
 
     //1
-        for(var i = 0; i < 5; i++){
+        for(var i = 0; i < fruits.length; i++){
             console.log(fruits[i])
         
     //2    
-        if (i < 5) {
+        if (fruits[i].length < 5) {
             console.log ("The fruit name is short! The fruit name is " + fruits[i])
         } else {
             console.log ("the fruit name is too long!")
@@ -76,14 +76,16 @@
             //3. Else console log "This is desktop view"
             // task 2 
 
-
+        if (window_width < iphone_width) {
+            console.log ("This is iphone view")
+        }else if (window_width > iphone_width, window_width < tablet_width) {
+            console.log ("This is tablet view")
+        } else {console.log("This is desktop view")}
 
             //End of task 2
         })
 
-        if (i < 413) {
-        	console.log ("This is iphone view")
-        }
+       
 
         // if (i > 413; i < 720;) {
         // 	console.log ("this is tablet view")
