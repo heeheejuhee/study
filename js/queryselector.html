@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Query Selector</title>
+	<style>
+		.popup {
+			display:none;
+			width:90vw;
+			height:90vh;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			padding:10px;
+			background-color:tomato;
+			color:white;
+		}
+		.popup.active{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		
+
+		// window.addEventListener('resize',resize)
+		// function resize(){
+		// 	console.log("I'm resizing");
+		// }
+
+		document.addEventListener('DOMContentLoaded',function(){
+			var button = document.querySelector('.btn');
+			var buttons = document.querySelectorAll('.btn');
+			var buttons2 = document.querySelectorAll('button');
+			var BUTTON = document.querySelector('#Button');
+			var BUTTON2 = document.getElementById('Button');
+			var popup = document.querySelector('.popup');
+			var closebtn = document.querySelector('.closebtn');
+
+			
+			button.addEventListener('click',function(){
+				if(!popup.className.includes('active')){
+					popup.className = popup.className + " active";
+					//popup.className += " active"
+				} else {
+					//popup.className = 'popup';
+				}
+
+			})
+
+			closebtn.addEventListener('click',function(){
+				popup.className = 'popup';
+			})
+
+			popup.addEventListener('dblclick',function(){
+				console.log('Im doubleclicked')
+			})
+
+		})
+
+		function sayHi(){
+			console.log("hi")
+		}
+
+	</script>
+
+	<button class="btn">Button</button>
+	<button class="btn">Button2</button>
+	<button id="Button">BUTTON</button>
+
+	<div class="popup">
+		<p>I love you</p>
+		<button class="closebtn">X</button>
+	</div>
+	
+	<ul>
+		<li onclick="sayHi()">click</li>
+		<li>dblclick</li>
+		<li>mousedown</li>
+		<li>mouseup</li>
+		<li>mouseover</li>
+		<li>mouseout</li>
+		<li>mousemove</li>
+	</ul>
+
+
+</body>
+</html>
