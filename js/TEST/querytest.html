@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document Query Test</title>
+        <style>
+            *{box-sizing: border-box;font-family:helvetica,arial,sans-serif;}
+            .container {display:inline-block;position:relative;width:400px;height:400px;background-color: lightgray;vertical-align: middle;}
+            .btn-container{display:inline-block;vertical-align: middle;margin-left:30px;}
+            .btn-container button {cursor:pointer;border-radius:3px;transition:0.3s all ease;display:block; margin:auto; padding:5px;background-color: #333;color:white;border:none;width:150px;text-transform:uppercase;margin-bottom:10px;}
+            .btn-container button:hover {background-color: #5e5e5e;}
+            .left,.right{display:inline-block !important;}
+            .circle { display:inline-block; border-radius:50px; position:absolute; width:40px; height:40px; background-color: tomato; transform:0.5s all ease-in-out;}
+        </style>
+        <script>
+            //Write your code here!
+
+            //End your code here!
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="btn-container">
+            <button class="top">Top</button>
+            <button class="left">Left</button>
+            <button class="right">Right</button>
+            <button class="bottom">Bottom</button>
+        </div>
+        <ol>
+            <li>Use DOMContentLoaded</li>
+            <li>Use addEventListener</li>
+            <li>Use querySelector/querySelectorAll</li>
+            <li>Use `string`.includes()</li>
+            <li>Assign styles by element.style.top = 0 or element.style.top = "auto"</li>
+            <br>
+            <li>MOVE THE CIRCLE BY CLICKING THE BUTTONS</li>
+        </ol>
+        <h3>Logic Tips</h3>
+        <ol>
+            <li>Make sure you have everything wrapped in DOMContentLoaded event</li>
+            <li>Query select buttons (SELECT BUTTONSSSSSS) and the circle</li>
+            <li>Loop all buttons</li>
+            <li>For every buttons, add event listener 'click' (buttons[i].addEventListener...)</li>
+            <li>When you click each button, check it's class name.(Try console.log(this.className))</li>
+            <li>If the button has class top OR bottom, set style.top and style.bottom to 'auto'</li>
+            <li>else if the button has class left OR right, set style.left and style.right to 'auto'</li>
+            <li>If the button has class top, set style.top = 0. repeat else if for bottom/left/right</li>
+        </ol>
+
+    </body>
+</html>
