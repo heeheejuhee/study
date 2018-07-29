@@ -1,0 +1,194 @@
+*{
+  font-family: helvetica
+}
+
+body {
+  margin: 0;
+}
+
+.nav {
+  background-color: #2d2d2d;
+  text-align: center;
+}
+.main-navigation {
+  display: block;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*text-decoration: none;*/
+}
+
+.main-navigation li {
+  display:inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.main-navigation li a {
+  display: block;
+  padding:30px;
+  text-decoration: none; 
+  color: #bababa;
+}
+
+.main-navigation li a:hover {
+  color: #777777;
+}
+
+.logo a img {
+  width: 16px; 
+  height: 16px; 
+  /*padding: 31px;*/
+}
+
+
+.sub-navigation {
+  display:none;
+  position:absolute;
+  width:100%;
+  top:100%;
+  left:0;
+  padding:0;
+}
+
+.sub-navigation li {
+  display:block;
+}
+
+.sub-navigation li a{
+  display: block;
+  text-decoration: none; 
+  color: black;
+  padding: 10px 0;
+}
+
+.sub-navigation li a:hover{
+  color:red;
+}
+
+.main-navigation li:hover .sub-navigation{
+  display:block;
+}
+
+/*.test {
+  width:40px;
+  height:40px;
+  background-color:yellow;
+}
+.test div {
+  width:10px;
+  height:10px;
+  background-color:black;  
+}
+.test > div {
+  background-color:red;
+}
+
+.test + div {
+  background-color:green;
+}*/
+
+/*link visited hover active LoVe HAte*/
+/*Pseudo class = :link :visited :hover :active*/
+.btn {
+  color:white;
+  background-color: #333;
+  display:inline-block;
+  padding:10px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  transition:0.3s transform ease;
+}
+.btn:hover {
+  transform:translateY(-2px);
+}
+.btn:active {
+  background-color:red;
+  transform:translateY(0);
+}
+
+/* footer */
+
+.nav2 {
+  background-color: #d6d6d6;
+  text-align: center;
+  height: 500px;
+}
+.footer {
+  display: block;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*text-decoration: none;*/
+}
+
+.footer li {
+  display:inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.footer li a {
+  display: block;
+  padding:50px;
+  text-decoration: none; 
+  color: #303030;
+}
+
+/*.footer li a:hover {
+  color: #777777;
+}*/
+
+/* Sub footer */
+
+.sub-footer {
+  /*display:none;*/
+  /*position:absolute;
+  width:100%;
+  top:100%;*/
+  left:0;
+  padding:0;
+}
+
+.sub-footer li {
+  display:block;
+}
+
+.sub-footer li a{
+  display: block;
+  text-decoration: none; 
+  color: #828282;
+  padding: 10px 0;
+}
+
+.sub-footer li a:hover{
+  color:#3a3a3a;
+  text-decoration: underline;
+}
+
+.footer li:hover .sub-footer{
+  display:block;
+}
+
+.div1 {
+  display: inline-block;
+}
+
+.div2 {
+  display: inline-block;
+}
+
+.div3 {
+  display: inline-block;
+}
+
+.div4 {
+  display: inline-block;
+}
+
+.div5 {
+  display: inline-block;
+}
