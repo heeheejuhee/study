@@ -10,7 +10,8 @@ main {
     height:100%%;
 }
 .container {
-    width : 1024px;
+    width:100%;
+    max-width : 1024px;
     margin:auto;
 }
 
@@ -101,5 +102,44 @@ main {
 .btn:active {
   background-color:red;
   transform:translateY(0);
+}
+
+.btn-mobile-menu {
+  display:none;
+}
+
+@media screen and (max-width:1024px){
+  /*MOBILE STYLING*/
+  .btn-mobile-menu {
+    display:block;
+    cursor:pointer;
+    padding: 10px;
+    text-align: right;
+    color: white;
+  }
+  .main-navigation {
+    display:none;
+  }
+
+  .main-navigation.opened {
+    display:block;
+  }
+  .main-navigation .logo {
+    display:none;
+  }
+
+  .main-navigation li {
+    display:block;
+    text-align: center;
+  }
+  .sub-navigation{
+    display:block;
+    position:relative;
+    color:#bababa;
+    background-color: #2d2d2d;
+  }
+  .sub-navigation li a {
+    color :#bababa;
+  }
 }
 

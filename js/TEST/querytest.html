@@ -15,34 +15,37 @@
         <script>
             //Write your code here!
             document.addEventListener('DOMContentLoaded',function(){
-                var top = document.querySelector('.top');
-                var left = document.querySelector('.left');
-                var right = document.querySelector('.right');
-                var bottom = document.querySelector('.bottom');
+                var buttons = document.querySelectorAll('button');
                 var circle = document.querySelector('.circle');
 
+                for(var i =0; i < buttons.length; i++){
 
+                    buttons[i].addEventListener('click',function(){
+                        var c = this.className;
+                        console.log(this.className);
 
+                        if(c == "top" || c == "bottom"){
+                            circle.style.top = "auto";
+                            circle.style.bottom = "auto";
+                        } else {
+                            circle.style.left = "auto";
+                            circle.style.right = "auto";
+                        }
+                        
+                        if(c== "top"){
+                            circle.style.top = 0;
+                        } else if (c == "bottom"){
+                            circle.style.bottom= 0;
+                        } else if (c == "left"){
+                            circle.style.left= 0;
+                        } else {
+                            circle.style.right=0;
+                        }
 
-
-
+                    })
+                }
 
             })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             //End your code here!
         </script>
