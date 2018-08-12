@@ -34,6 +34,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       var b = document.querySelector('body');
       var btn = document.querySelectorAll('button');
+<<<<<<< HEAD
       var btn1 = document.getElementsByClassName('btn1');
       var btn2 = document.getElementsByClassName('btn2');
       var btn3 = document.getElementsByClassName('btn3');
@@ -59,11 +60,35 @@
         })
 
 
+=======
+
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', function () {
+          var clicked = this.className;
+          console.log(clicked);
+
+          if (clicked.includes('btn1')) {
+            b.style.backgroundColor = "tomato";
+          } else if (clicked.includes('btn2')) {
+            document.body.style.backgroundColor = "white";
+          } else if (clicked.includes('btn3')){
+          	alert("미워");
+          } else {
+            var age = prompt("How old are you?"); 
+            console.log("I am " + age + ' years old');
+          }
+
+        })
+
+>>>>>>> 75721a8769a1d926da342a89c817151ae1fa371a
       }
 
     })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75721a8769a1d926da342a89c817151ae1fa371a
     //End of your code
   </script>
 </head>
@@ -74,6 +99,11 @@
   <button class="btn btn3">Alerting I love you oppa!</button>
   <button class="btn btn4">Prompting age</button>
 
+<<<<<<< HEAD
+=======
+  <div class="btn1"></div>
+
+>>>>>>> 75721a8769a1d926da342a89c817151ae1fa371a
   <h3>아래 내용을 잘 읽고 자바스크립트를 완성하세요 :) 저번주 시험과 많이 비슷하니 팁은 많이 주지 않을게!! 뜌이뜌이 화이팅!</h3>
   <h4>Task</h4>
   <ol>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scrolling Effect</title>
+	<style>
+		* {
+			list-style: none;
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		nav, footer {
+			padding:10px;
+		}
+		.main {
+			height:100vh;
+		}
+		nav ul li, footer ul li {
+			display:inline-block;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+		</ul>
+	</nav>
+	<div class="main">
+		<ol>
+			<li>Make nav colour tomato when window at the top</li>
+			<li>Make nav colour red when window not at the top</li>
+		</ol>
+	</div>
+	<footer>
+		<ul>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+			<li>asdf</li>
+		</ul>
+	</footer>
+	<script>
+		
+		window.addEventListener('scroll',function(){
+			// console.log(window.pageYOffset);
+			var nav = document.querySelector('main');
+			if (document.documentElement.scrollTop || document.body.scrollTop){
+				// document.nav.style.backgroundColor = "tomato"
+				nav.style.backgroundColor = "tomato"
+			} else {
+				nav.style.backgroundColor = "red"
+			}
+		})
+
+	</script>
+</body>
+</html>

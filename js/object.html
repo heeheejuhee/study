@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Object</title>
+</head>
+<body>
+	<h3>Object</h3>
+	<ul>
+		<li>Key</li>
+		<li>Value</li>
+	</ul>
+	
+	<a href="https://www.w3schools.com/js/js_objects.asp">READ THIS</a>
+	<script>
+		var book = new Object();
+		// var book = {};
+		book.title = "Jungle Book";
+		book.author = "Juhee";
+
+		var book2 = {title : "Alice in Wonderland",	author: "Chris"	}
+		var book3 = {
+			title : "Peter Pan",
+			author : "Juhee 2"
+		}
+
+		console.log(book);
+		console.log(book2);
+		console.log(book3.title);
+
+		var cart = [
+			{
+				id : '2345',
+				name : 'pencil',
+				price: 5.00,
+				category: ['stationary','abc','bcd'],
+			},
+		 	"Eraser",
+		 	"Ruler"
+		 ];
+
+		 console.log(cart[0]);
+
+		 var page = {
+		 	id : '1',
+		 	title: 'Product',
+		 	body:'This is pencil in our store',
+		 	productId : '4',
+		 	product : {
+		 		id : '1',
+		 		name :'Pencil',
+		 		price : 10.00,
+		 		image: 'https://image.com'
+		 	}
+		 }
+
+
+		 var test = new Object();
+
+		 test.firstName = "Ju Hee";
+		 test.lastName = "Han";
+		 test.fullName = function(){
+		 	return this.firstName + " " + this.lastName;
+		 }
+
+		 // test = {
+		 // 	firstName: "Ju Hee",
+		 // 	lastName: "Han",
+	 	// 	fullName : function(){
+	 	// 	}
+		 // }
+
+		 console.log(test.fullName());
+		 console.log(test["firstName"]);
+
+
+		 var array = ['apple', 'banana', 'orange'];
+
+		 console.log(array[1]);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+		.main {
+			height:100vh;
+		}
+		.main:nth-child(even){
+			background-color:red;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="main">
+		<a href="#third">Go to third</a>
+	</div>
+	<div class="main">
+		
+	</div>
+	<div class="main">
+		
+	</div>
+	<div id="third" class="main">
+		
+	</div>
+	<div class="main">
+		
+	</div>
+<script>
+		document.addEventListener('DOMContentLoaded',function(){
+				
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			    anchor.addEventListener('click', function (e) {
+			        e.preventDefault();
+
+			        document.querySelector(this.getAttribute('href')).scrollIntoView({
+			            behavior: 'smooth'
+			        });
+			    });
+			});
+		})
+
+	</script>
+</body>
+</html>
