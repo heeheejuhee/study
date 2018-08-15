@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: helvetica, arial, sans-serif;
+}
+
+
+.shield-img {
+	width:100%;
+	margin-bottom: 30px;
+}
+
+.container {
+	width:100%;
+	max-width:600px;
+	margin: auto;
+}
+
+.logo img {
+	width: 200px;
+	filter: invert(1);
+}
+
+.logo .menu-btn {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-color: pink;
+	position:relative;
+}
+
+nav {
+	background-color: #2868bc;
+}
+
+.menu-container ul li {
+	color: white;
+
+}
+
+h1 {
+	color: #2868bc;
+	margin-bottom: 20px;
+	
+}
