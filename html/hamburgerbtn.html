@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hamburger button</title>
+	<style>
+		.hamburger-btn {
+			display:inline-block;
+			position:relative;
+			vertical-align: middle;
+			width:50px;
+			height:50px;
+			border-radius: 100%;
+			background-color:black;
+			cursor:pointer;
+		}
+		.hamburger-btn .line {
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:60%;
+			height:3px;
+			background-color: #fff;
+			transform:translate(-50%,-50%);
+		}
+		.hamburger-btn .line:first-child {
+			top:20%;
+			transform:translateX(-50%);
+		}
+		.hamburger-btn.active .line:first-child  {
+			top:50%;
+			transform:translate(-50%, -50%) rotate(45deg);
+		}
+
+
+		.hamburger-btn.active .line:nth-child(2)  {
+			display:none;
+		}
+
+
+		.hamburger-btn .line:last-child {
+			top:unset;
+			bottom:20%;
+			transform:translateX(-50%);
+		}
+		.hamburger-btn.active .line:last-child  {
+			top:50%;
+			bottom:unset;
+			transform:translate(-50%, -50%) rotate(-45deg);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="hamburger-btn">
+		<div class="line"></div>		
+		<div class="line"></div>		
+		<div class="line"></div>		
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			var btn = document.querySelector('.hamburger-btn');
+			
+			btn.addEventListener('click',function(){
+				if(this.className.includes('active')){
+					this.className = this.className.replace(" active","");
+				} else {
+					this.className += " active"
+				}
+			})
+		})
+	</script>
+</body>
+</html>
