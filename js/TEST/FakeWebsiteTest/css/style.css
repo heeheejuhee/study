@@ -21,6 +21,7 @@
 .logo img {
 	width: 200px;
 	filter: invert(1);
+	
 }
 
 .logo .menu-btn {
@@ -45,3 +46,25 @@ h1 {
 	margin-bottom: 20px;
 	
 }
+
+ul {
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 25px;	
+}
+
+li {
+	padding-top: 13px;
+	padding-bottom: 8px;
+	padding-right: 99px;
+
+}
+
+.main {
+	padding-top: 10px;
+}
+
+.container .menu-container .menu2 {
+	color: pink;
+}
+
