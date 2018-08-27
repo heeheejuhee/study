@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Attribute</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			background-color:gray;
+		}
+		.pop-up {
+			display:none;
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color: rgba(256,256,256,0.5);
+		}
+		.pop-up .message {
+			position:absolute;
+			outline:1px solid green;
+			width:150px;
+			height:150px;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<button class="btn" data-btnid="1">Open Popup</button>
+	<button class="btn" data-btnid="2">Open Popup 2</button>
+	<button class="btn" data-btnid="3">Open Popup 3</button>
+
+
+	<div class="pop-up" data-popupid="1">
+		<div class="message">
+			Hello Juhee
+		</div>
+	</div>
+
+
+	<div class="pop-up" data-popupid="2">
+		<div class="message">
+			Hello Chris
+		</div>
+	</div>
+
+	<div class="pop-up" data-popupid="3">
+		<div class="message">
+			Hello Three
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+
+			//HARDCORE
+			var btns = document.querySelectorAll('.btn');
+			var popups = document.querySelectorAll('.pop-up');
+
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].addEventListener('click',function(){
+
+					var btnid = this.getAttribute('data-btnid');
+
+					for(var j = 0 ; j < popups.length; j++){
+
+						var popup = popups[j];
+						var popupid = popup.getAttribute('data-popupid');
+
+						if( btnid == popupid){
+							popup.style.display = "block";
+						}
+
+					}
+				})
+			}
+
+			//EASY version
+
+			// var button = document.querySelector('.btn');
+			// var buttonID = button.getAttribute("data-btnid");
+
+			// var popup = document.querySelector('.pop-up');
+			// var popupID = popup.getAttribute('data-popupid');
+
+			// if(buttonID == popupID) {
+			// 	console.log('EQUAL')
+			// }
+
+
+		})
+	</script>
+</body>
+</html>
