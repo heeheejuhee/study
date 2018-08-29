@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data-Attr test</title>
+    <style>
+        *{box-sizing: border-box; margin:0; padding:0;font-family:helvetica,arial,sans-serif;}
+        .box {
+            width:50px;
+            height:50px;
+            border:1px solid black;
+            margin: 30px auto;
+        }
+        .container {
+            width:100%;
+            max-width:600px;
+            margin:auto;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 0 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Red</button>
+        <button>Yellow</button>
+        <button>Green</button>
+        <button>Blue</button>
+
+        <div class="box"></div>
+
+        <h2 style="margin-bottom:15px;text-align:left;">Instruction</h2>
+        <ol style="text-align:left;margin-bottom: 30px;">
+            <li>Give data attributes to buttons: data-colour and assign each colours</li>
+            <li>When you click on buttons, box should change it's background-color</li>
+            <li>Do NOT give classes to buttons</li>
+        </ol>
+        <h4 style="margin-bottom:15px;text-align:left;">Optional</h4>
+        <ol style="text-align:left;">
+            <li>Give data attributes to one of the button : data-isCircle="1"</li>
+            <li>When you click on the button, and the button has data-isCircle=1, then make the box to a circle</li>
+            <li>Else the button does not have a data-isCircle then make the box to box again.</li>
+        </ol>
+    </div>
+</body>
+</html>
