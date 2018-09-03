@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+
+</head>
+<body>
+
+	<button data-itemid='12'>Click me</button>
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+
+		
+		localStorage.getItem("lastname");
+		localStorage.removeItem("lastname");
+
+
+		var btn = document.querySelector('button');
+
+		btn.addEventListener('click',function(){
+			
+			var itemID = this.getAttribute('data-itemid');
+
+			if(localStorage.getItem('item-id') !== null ){
+				localStorage.removeItem('item-id');
+			} else {
+				localStorage.setItem("item-id", itemID);
+			}
+			
+		})
+
+
+	</script>
+</body>
+</html>

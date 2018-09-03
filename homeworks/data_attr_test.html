@@ -22,14 +22,15 @@
             margin: 0 20px;
         }
 
+
     </style>
 </head>
 <body>
     <div class="container">
-        <button>Red</button>
-        <button>Yellow</button>
-        <button>Green</button>
-        <button>Blue</button>
+        <button data-colour="red">Red</button>
+        <button data-colour="yellow" data-isCircle="false">Yellow</button>
+        <button data-colour="green" data-isCircle="false">Green</button>
+        <button data-colour="blue" data-isCircle="true">Blue</button>
 
         <div class="box"></div>
 
@@ -46,5 +47,40 @@
             <li>Else the button does not have a data-isCircle then make the box to box again.</li>
         </ol>
     </div>
+
+    <script>
+    	document.addEventListener("DOMContentLoaded",function(){
+
+    		var btns = document.querySelectorAll('button');
+    		var box = document.querySelector('.box');
+
+    		for (var i = 0; i < btns.length; i++){
+    			var btn = btns[i];
+
+    			btn.addEventListener('click', function(){
+    				var colour = this.getAttribute('data-colour');
+    				var isCircle = this.getAttribute('data-isCircle');
+
+    				box.style.backgroundColor = colour
+
+    				if(isCircle == "true") {
+    					box.style.borderRadius = "100%";
+    				} else {
+    					box.style.borderRadius = "0";
+    				}
+
+    			})
+    		}
+
+
+
+
+
+    	})
+
+
+
+
+    </script>
 </body>
 </html>
