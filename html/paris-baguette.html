@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paris-Baguette</title>
+	<style>
+		* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		list-style: none;
+		font-family: helvetica, arial, sans-serif;
+	}
+
+
+/*	.shield-img {
+		width:100%;
+		margin-bottom: 30px;
+	}*/
+
+	.container {
+		width:100%;
+		max-width:742px;
+		margin: auto;
+		background-color: white;
+		height: 1300px;
+	}
+	
+	.first-container {
+		width:100%;
+		max-width:600px;
+		margin: auto;
+		background-color: white;
+	}
+
+	.logo {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.logo .menu-btn {
+		width: 48px;
+		height: 48px;
+		display: inline-block;
+		vertical-align: middle;
+		position:relative;
+	}
+
+	nav {
+		text-align: center;
+		background-color: white;
+	}
+
+
+	h1 {
+		color: #2868bc;
+		margin-bottom: 20px;
+	}
+
+
+
+	.main {
+		background-color: #cdcdcd;
+		height: 1300px;
+	}
+
+	.container .menu-container {
+		vertical-align:top;
+		color: pink;
+		font-size:12px;
+	}
+
+	.main-navigation {
+		display: block;
+		text-align: center;
+		list-style-type: none;
+		margin: auto;
+		padding: 0;
+		width:100%;
+		background-color: #244e98;
+	}
+
+	.main-navigation li {
+	  display:inline-block;
+	  vertical-align: bottom;
+	  position: relative;
+	}
+
+	.main-navigation li a {
+	  display: block;
+	  padding-right: 30px;
+	  padding-left: 30px;
+	  padding-top: 15px;
+	  padding-bottom: 15px;
+	  text-decoration: none; 
+	  color: white;
+	}
+
+	.image-best {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.products {
+	    text-align: center;
+	    padding-bottom: 20px;
+	}
+
+	.product-box {
+		width: 228px;
+	    min-height: 310px;
+	    height: 100%;
+	    overflow: hidden;
+	    background: #fff;
+	    position: relative;
+	    text-align: center;
+	    display: inline-block;
+	}
+
+	.product-name {
+		display: block;
+	    position: absolute;
+	    top: 235px;
+	    left: 5%;
+	    width: 90%;
+	    font-size: 0.9em;
+	    font-weight: bold;
+	    color: #494745;
+	}
+
+	.product-explanation {
+		position: absolute;
+	    top: 260px;
+	    left: 0;
+	    padding: 0 5%;
+	    display: block;
+	    text-align: center;
+	    font-size: 12px;
+	    letter-spacing: -1px;
+	    line-height: 16px;
+	    display: block;
+	    height: 100%;
+	}
+
+	.ssukdduk {
+		border-width: 2px;
+		border-style: solid;
+		border-color: #cdcdcd;
+	}
+
+	.hodduk {
+		border-width: 2px;
+		border-style: solid;
+		border-color: #cdcdcd;
+	}
+	.product-list {
+		clear: both;
+	    overflow: hidden;
+	    position: relative;
+	    border-top: 2px solid #015299;
+	}
+
+	.product-box2 {
+	    float: left;
+	    width: 50%;
+	    height: 217px;
+	    overflow: hidden;
+	    padding-top: 30px;
+	    background: #fff;
+	    position: relative;
+	    padding-left: 34px;
+	    border-bottom: 1px dashed #cccccc;
+	}
+
+	.product-name2 {
+	    display: block;
+	    position: absolute;
+	    top: 30px;
+	    left: 206px;
+	    width: 90%;
+	    text-align: left;
+	    font-size: 0.9em;
+	    z-index: 2;
+	    font-weight: bold;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #494745;
+	}
+
+	.product-explanation2  {
+		position: absolute;
+	    top: 60px;
+	    left: 187px;
+	    padding: 0 5%;
+	    display: block;
+	    text-align: left;
+	    font-size: 0.7em;
+	    letter-spacing: -1px;
+	    text-overflow: ellipsis;
+	    height: 90px;
+	    overflow: hidden;
+	}
+
+	.btn {
+	    color: white;
+	    background-color: #244e98;
+	    display: inline-block;
+	    padding: 4px 14px;
+	    margin: 10px 0;
+	    border-radius: 24px;
+	    text-decoration: none;
+	    transition: 0.3s transform ease;
+	    position: absolute;
+	    top: 150px;
+	    left: 204px;
+	    font-size: 13px;
+	}
+
+	.product-box3 {
+	    float: left;
+	    width: 50%;
+	    height: 217px;
+	    overflow: hidden;
+	    padding-top: 30px;
+	    background: #fff;
+	    position: relative;
+	    padding-left: 34px;
+	    border-bottom: 1px dashed #cccccc;
+	}
+
+	.product-name3 {
+	    display: block;
+	    position: absolute;
+	    top: 30px;
+	    left: 206px;
+	    width: 90%;
+	    text-align: left;
+	    font-size: 0.9em;
+	    z-index: 2;
+	    font-weight: bold;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: #494745;
+	}
+
+	.product-explanation3 {
+		position: absolute;
+	    top: 60px;
+	    left: 187px;
+	    padding: 0 5%;
+	    display: block;
+	    text-align: left;
+	    font-size: 0.7em;
+	    letter-spacing: -1px;
+	    text-overflow: ellipsis;
+	    height: 90px;
+	    overflow: hidden;
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="first-container">
+			<div class="logo">
+				<!-- <div class="menu-btn">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div> -->
+				<img src="img/paba.jpg">
+			</div>
+			<div class="menu-container">
+			</div>
+		</div>
+<!-- 		<div class="search">
+			<img src="img/search.jpg">
+		</div> -->
+	</nav>
+	
+	<ul class="main-navigation">
+		<li><a href="#제품안내">제품안내</a></li>
+		<li><a href="#매장찾기">매장찾기</a></li>
+		<li><a href="#이벤트">이벤트</a></li>
+		<li><a href="#고객센터">고객센터</a></li>
+		<li><a href="#마이페이지">마이페이지</a></li>
+		<li><a href="#장바구니">장바구니</a></li>
+	</ul>
+
+
+	<div class="main">
+		<div class="container">	
+			<!-- <img class="shield-img" src="img/shield.jpg" alt=""> -->
+			<div class="image-best">
+				<img src="img/best.jpg">
+			</div>
+
+			<div class="products">
+				<div class="product-box">
+					<span class="product-image">
+						<img src="img/Ssukdduk.jpg" class="ssukdduk" height="226px;" width="226px;">
+					</span>
+					<span class="product-name">오빠닮은 떡</span>
+					<span class="product-explanation">
+						남해의 해풍을 맞고 자란 쑥을 머금은 떡 안의 팥앙금과 콩고물의 앙상블
+					</span>
+				</div>
+				<div class="product-box">
+					<span class="product-image">
+						<img src="img/Hodduk.jpg" class="hodduk" height="226px;" width="226px;">
+					</span>
+					<span class="product-name">호떡</span>
+					<span class="product-explanation">
+						쫄깃한 떡이 들어간 빵 위에 고소한 아몬드,땅콩,호박씨와의 달콤한 조화
+					</span>
+				</div>
+			</div>
+			<div class="product-list">
+				<div class="product-box2">
+					<span class="product-image">
+						<img src="img/gorokae.jpg" class="ssukdduk" height="157spx;" width="157px;">
+					</span>
+					<span class="product-name2">꽃맛살고로케</span>
+					<span class="product-explanation2">
+						부드러운 마요네즈 소스 안에 꽃맛살을 섞어 누구나 즐길 수 있는 고로케
+					</span>
+					<span class="detail">
+						<a href="cart.html" class="btn">자세히 보기</a>
+					</span>
+				</div>
+				<div class="product-box3">
+					<span class="product-image">
+						<img src="img/almond.jpg" class="ssukdduk" height="157spx;" width="157px;">
+					</span>
+					<span class="product-name3">아몬드크로와상</span>
+					<span class="product-explanation3">
+						부드러운 마요네즈 소스 안에 꽃맛살을 섞어 누구나 즐길 수 있는 고로케
+					</span>
+					<span class="detail2">
+						<a href="cart.html" class="btn">자세히 보기</a>
+					</span>	
+				</div>
+
+
+
+
+			</div>
+
+			
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit omnis, perspiciatis libero recusandae praesentium, odio non laborum repellat amet quasi mollitia ipsum tenetur. Ab, praesentium! Tempora incidunt eos ipsam quae!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit omnis, perspiciatis libero recusandae praesentium, odio non laborum repellat amet quasi mollitia ipsum tenetur. Ab, praesentium! Tempora incidunt eos ipsam quae!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit omnis, perspiciatis libero recusandae praesentium, odio non laborum repellat amet quasi mollitia ipsum tenetur. Ab, praesentium! Tempora incidunt eos ipsam quae!</p> -->
+		</div>
+	</div>
+
+
+
+
+	
+</body>
+</html>
