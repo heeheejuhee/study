@@ -12,8 +12,6 @@
 		font-family: helvetica, arial, sans-serif;
 	}
 
-
-
 	.container {
 		width:100%;
 		max-width:742px;
@@ -229,11 +227,6 @@
 	    height: 90px;
 	    overflow: hidden;
 	}
-
-
-
-
-
 	</style>
 </head>
 <body>
@@ -294,7 +287,7 @@
 						부드러운 마요네즈 소스 안에 꽃맛살을 섞어 누구나 즐길 수 있는 고로케
 					</span>
 					<span class="detail">
-						<a href="cart.html" class="btn">자세히 보기</a>
+						<a href="cart.html" class="btn">장바구니</a>
 					</span>
 				</div>
 				<div class="product-box3">
@@ -306,14 +299,39 @@
 						부드러운 마요네즈 소스 안에 꽃맛살을 섞어 누구나 즐길 수 있는 고로케
 					</span>
 					<span class="detail2">
-						<a href="cart.html" class="btn">자세히 보기</a>
+						<a data-item-name="아몬드크로와상" data-item-description="부드러운 마요네즈 소스 안에 꽃맛살을 섞어 누구나 즐길 수 있는 고로케" href="cart.html" class="btn">장바구니</a>
 					</span>	
 				</div>
 			</div>
 		</div>
 	</div>
 
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded",function(){
 
+		var btn = document.querySelector('.detail2 .btn');
+
+		btn.addEventListener('click',function(e){
+			e.preventDefault();
+
+			var title = this.getAttribute("data-item-name");
+			var description = this.getAttribute("data-item-description");
+
+
+			var cartObject = {
+				'title' : title,
+				'description' : description
+			}
+
+			localStorage.setItem('item',cartObject);
+
+			console.log(cartObject);
+
+		})
+
+
+	})
+</script>
 
 
 	

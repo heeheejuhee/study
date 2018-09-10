@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carousel</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			background-color: black;
+		}
+		.container{
+			width:100%;
+			max-width: 600px;
+			margin:auto;
+		}
+		.carousel {
+			position:relative;
+			overflow:hidden;
+			height:600px;
+		}
+		
+		.carousel .slides{
+			white-space: nowrap;
+			font-size:0;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		.carousel .slides .slide {
+			display:inline-block;
+			width:100%;
+			max-width: 600px;
+		}
+		.carousel img {
+			width:100%;
+			max-width:600px;
+		}
+		.btn {
+			position:absolute;
+			left:0;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		.btn-right {
+			left:unset;
+			right:0;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="carousel">
+			
+
+			<div class="slides">
+				<div class="slide">
+					<img src="img/almond.jpg" alt="">
+				</div>
+
+				<div class="slide">
+					<img src="img/gorokae.jpg" alt="">
+				</div>
+
+				<div class="slide">
+					<img src="img/Hodduk.jpg" alt="">
+				</div>
+
+				<div class="slide">
+					<img src="img/Ssukdduk.jpg" alt="">
+				</div>
+			</div>
+				<button class="btn btn-left"> < </button>
+				<button class="btn btn-right"> > </button>
+		
+		</div>
+	</div>
+	<script>
+		//When DOMContentLoaded
+		// add 'active' class on the first slide
+		//click btn
+		//if btn has class btn-left
+		//remove class active, and add active to the next slide
+		//slides move 600px
+		//if btn has class btn-right
+		//slides move -600px
+
+
+
+	</script>
+</body>
+</html>
