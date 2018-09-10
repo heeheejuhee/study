@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		body {
+	margin:100px;
+}
+
+
+#animateTest {text-align: center;background: #123;background-image: -webkit-linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), -webkit-linear-gradient(#234,#345,#234);background-image: -moz-linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), -moz-linear-gradient(#234,#345,#234);background-image: -ms-linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), -ms-linear-gradient(#234,#345,#234);background-image: -o-linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), -o-linear-gradient(#234,#345,#234);background-image: linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), linear-gradient(#234,#345,#234);padding: 20px 10px;width: 240px;color: #DEF;text-shadow: 0 1px 1px rgba(0, 0, 0, .7);margin: 0 auto;border-radius: 5px;font-weight: bold;box-shadow: 0 0 7px 3px rgba(0, 155, 255, .3), inset 0 0 0 1px rgba(180, 255, 255, .2), inset 0 1px 0 rgba(255, 255, 255, .2), 0 0 0 1px #012;-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;-o-backface-visibility: hidden;backface-visibility: hidden;-webkit-animation-duration: 1s;-webkit-animation-delay: .2s;-webkit-animation-timing-function: ease;-webkit-animation-fill-mode: both;-moz-animation-duration: 1s;-moz-animation-delay: .2s;-moz-animation-timing-function: ease;-moz-animation-fill-mode: both;-ms-animation-duration: 1s;-ms-animation-delay: .2s;-ms-animation-timing-function: ease;-ms-animation-fill-mode: both;-o-animation-duration: 1s;-o-animation-delay: .2s;-o-animation-timing-function: ease;-o-animation-fill-mode: both;animation-duration: 1s;animation-delay: .2s;animation-timing-function: ease;animation-fill-mode: both;
+}
+
+
+
+
+#animateTestBall {
+text-align: center;
+background: #123;
+background-image: linear-gradient(-45deg, rgba(100, 155, 155, 0), rgba(100, 155, 155, .1) 50%, transparent 50%), linear-gradient(#234,#345,#234);
+padding: 0px 0px;
+width: 100px;
+height:100px;
+color: #DEF;
+text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
+border-radius: 100px;
+font-weight: bold;
+box-shadow: 0 0 7px 3px rgba(0, 155, 255, .3), inset 0 0 0 1px rgba(180, 255, 255, .2), inset 0 1px 0 rgba(255, 255, 255, .2), 0 0 0 1px #012;  
+}
+
+.myBounceInAnimation {
+	animation-duration: 1.5s;
+	animation-delay: .5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-name: myBounceInAnimation; 
+}
+
+@keyframes myBounceInAnimation {
+	0% {
+		transform: translateY(-2000px);
+		opacity:0;
+	}
+
+	40% {
+		transform: translateY(0px);
+		opacity:1; 
+	}
+	41% {
+		transform: scaleY(0.5);	
+	}
+
+	50% {
+		transform: translateY(-100px);
+	}
+
+	60% {
+		transform: translateY(0px);
+	}
+	61% {	
+		transform: scaleY(0.8);
+	}
+	70% {		
+		transform: translateY(-40px);
+	}
+	80% {			
+		transform: translateY(0px);
+	}
+	81% {	
+		transform: scaleY(0.9);	
+	}
+	90% {	
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+	</style>
+</head>
+<body>
+	
+	<div id="animateTest" class="myBounceInAnimation">JUHEE</div>
+
+	<div id="animateTestBall" class="myBounceInAnimation"></div>
+
+
+
+</body>
+</html>

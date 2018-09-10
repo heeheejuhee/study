@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-animation</title>
+	<style>
+
+		body {
+			padding: 200px;
+		}
+		.ball {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			border-radius: 50%;
+			animation-name: ball;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-out;
+			animation-fill-mode: both;
+		}
+
+		@keyframes ball {
+			0%, 20%, 50%, 80%, 100% {
+				transform: translateY(0);
+				background-color: #ff893a;
+			}
+			20% {
+				transform: translateY(-0.27rem);
+				background-color: #f22d6e;
+			}
+			30% {
+				transform: translateY(-0.500rem);
+				background-color: #facf23;
+			}
+
+			50% {
+				transform: translateY(-0.1200rem);
+				background-color: #f22d6e;
+			}
+
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="ball"></div>
+
+
+
+
+
+</body>
+
+</html>
