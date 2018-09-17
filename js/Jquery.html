@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+</head>
+<body>
+
+	<button class="btn">Button</button>
+	<button class="btn">Button</button>
+	<button class="btn">Button</button>
+	<button class="btn">Button</button>
+
+
+
+
+<script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="  crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+	var btn = document.querySelectorAll('.btn');
+	console.log(btn);
+	for(var i =0 ; i < btn.length; i++){
+		btn[i].addEventListener('click',function(){
+			console.log('btn clicked');
+		})	
+	}
+
+	var jqueryBtn = $('.btn');
+	console.log(jqueryBtn);
+	jqueryBtn.click(function(){
+		console.log('jquery btn clicked');
+		console.log(this);
+		console.log($(this));
+	})
+</script>
+</body>
+</html>
