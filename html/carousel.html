@@ -27,7 +27,7 @@
 			left:0;
 			top:0;
 		}
-		.carousel .slides .slide {
+		.carousel .slides .slide  {
 			display:inline-block;
 			width:100%;
 			max-width: 600px;
@@ -55,7 +55,7 @@
 			
 
 			<div class="slides">
-				<div class="slide">
+				<div class="slide1">
 					<img src="img/almond.jpg" alt="">
 				</div>
 
@@ -78,13 +78,56 @@
 	</div>
 	<script>
 		//When DOMContentLoaded
-		// add 'active' class on the first slide
+		//add 'active' class on the first slide
+
 		//click btn
 		//if btn has class btn-left
 		//remove class active, and add active to the next slide
 		//slides move 600px
-		//if btn has class btn-right
+
+		//if btn dsshas class btn-right
 		//slides move -600px
+
+		document.addEventListener('DOMContentLoaded',function(){
+			 var leftbutton = document.querySelector('.btn-left');
+			 var rightbutton = document.querySelector('.btn-right');
+			 var slide = document.querySelector('.slide');
+			 var slides = document.querySelector('.slides');
+			 var first = document.querySelector('.slide1');
+			 
+
+			 first.addEventListener('load',function(){
+			 	if(!first.className.includes('active')){
+			 		first.className = first.className + " active";
+			 	} else {
+			 		first.className = '.slide1';
+			 	}
+			 })
+
+			 leftbutton.addEventListener('click',function(){
+			 	if(leftbutton.className == '.btn-left'){
+			 		//remove class active
+
+			 		slides.style.left = 600 + 'px';
+
+			 	}
+			 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		})
+
 
 
 
