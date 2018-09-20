@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: orangered;
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.navigation {
+	list-style: none;
+	padding-top: 30px;
+	display: none;
+}
+
+.navigation.active {
+	display: block;
+}
+
+.navigation li a {
+	display: block;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+.mobile-btn {
+	height: 30px;
+	width: 30px;
+	float: right;
+	background-color: black;
+
+}
+
+@media screen and (min-width: 1024px){
+	.hide-on-desktop {
+		display: none;
+	}
+
+	.navigation {
+		display: block;
+		padding: 0;
+		text-align: right;
+	}
+
+	.navigation li {
+		display: inline-block;
+
+
+	}
+}
