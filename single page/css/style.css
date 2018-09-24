@@ -1,4 +1,5 @@
 * {
+	font-family:helvetica, arial, sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -6,18 +7,15 @@
 
 nav {
 	background-color: #ffcaca;
-	height: 104px;
+	/*height: 104px;*/
 }
 
-li {
-	margin-top: 33px;
-	font-family: helvetica;
-	padding-left: 20px;
-}
 
 .logo{
-	height: 98px;
+	width:100px;
+	/*height: 98px;*/
     margin-left: 18px;
+    position:absolute;
     /*text-shadow: 2px 2px grey;*/
 }
 .container {
@@ -32,21 +30,22 @@ li {
 
 .navigation {
 	list-style: none;
-	padding-top: 30px;
-	display: none;
-	max-height: 900px;
+	padding-top: 60px;
+	max-height: 0;
+	transition: 0.3s max-height ease-in-out;
 }
 
 .navigation.active {
 	display: block;
+	max-height: 900px;
 }
 
-.navigation li {
-	/*height: 104px;*/
+.navigation li:hover a {
+	color:white;
+	background-color: #4b553a;
 }
 
 .navigation li a {
-
 	display: block;
 	padding: 10px;
 	text-align: center;
@@ -55,17 +54,19 @@ li {
 }
 
 .mobile-btn {
-	margin-top: 35px;
+	margin: 15px 0;
 	margin-right: 30px;
 	height: 30px;
 	width: 30px;
 	float: right;
 	background-color: #4b553a;
-
-
+	cursor:pointer;
 }
 
 @media screen and (min-width: 1024px){
+	.logo{
+		width:120px;
+	}
 	.hide-on-desktop {
 		display: none;
 	}
@@ -74,11 +75,13 @@ li {
 		display: block;
 		padding: 0;
 		text-align: right;
+		max-height:none;
 	}
 
 	.navigation li {
 		display: inline-block;
-
-
+	}
+	.navigation li a {
+		padding: 30px;
 	}
 }
