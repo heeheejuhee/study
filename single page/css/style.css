@@ -20,9 +20,17 @@
 
 nav {
 	/*background-color: #ffcaca;*/
-	background-image:url(/img/bgcolour.jpg);
+	background-image:url(img/bgcolour.jpg);
 	background-size: contain;
 	/*height: 104px;*/
+}
+
+h1 {
+	font-family: 
+}
+p {
+	font-size: 12px;
+	text-align: center;
 }
 
 .logo{
