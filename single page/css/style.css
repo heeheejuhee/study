@@ -20,7 +20,7 @@
 
 nav {
 	/*background-color: #ffcaca;*/
-	background-image:url(img/bgcolour.jpg);
+	background-image:url(/img/bgcolour.jpg);
 	background-size: contain;
 	/*height: 104px;*/
 }
@@ -94,6 +94,7 @@ p {
 	top:0;
 	left:0;
 	font-size: 0;
+	transition:0.5s all ease-in-out;
 }
 
 .slide {
@@ -105,7 +106,7 @@ p {
 	font-size: medium;
 	
 }
-.slide .bgimg {
+.bgimg {
 	position:absolute;
 	top:0;
 	left:0;
@@ -167,5 +168,69 @@ p {
 	}
 	.navigation li a {
 		padding: 30px;
+	}
+}
+
+/*ROW*/
+.row {
+	display:flex;
+	flex-flow:column nowrap;
+	text-align: center
+}
+
+.row .col {
+	padding:15px;
+}	
+.row .col:not(:last-child){
+	padding: 15px 15px 0;
+}
+
+.row .col.thumbnail a {
+	position:relative;
+	display:block;
+	height:100%;
+	background-size:cover;
+	text-align: center;
+	padding:10px;
+	text-decoration: none;
+	color:white;
+}
+
+.thumbnail-description {
+	opacity:0;
+	transition:0.3s all ease-in-out;
+}
+.row .col.thumbnail a .bgimg {
+	filter:brightness(1);
+	transition:0.3s all ease-in-out;
+}
+
+.row .col.thumbnail a:hover .thumbnail-description{
+	opacity:1;
+}
+
+.row .col.thumbnail a:hover .bgimg{
+	filter:brightness(0.5);
+}
+
+
+
+/*ROW END*/
+@media screen and (min-width: 1024px){
+	.row {
+		flex-flow: row wrap;
+		text-align: left;
+	}
+	.row .col:not(:last-child){
+		padding: 15px;
+	}
+	.row.three-col .col {
+		width:33%;
+	}
+	.row.two-col .col {
+		width:50%;
+	}
+	.row.one-col .col {
+		width:100%;
 	}
 }
