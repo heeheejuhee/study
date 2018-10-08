@@ -8,6 +8,7 @@
 .container {
 	width: 100%;
 	max-width: 1024px;
+	padding: 40px 0;
 	margin: auto;
 }
 
@@ -21,7 +22,6 @@
 
 nav {
 	/*background-color: #ffcaca;*/
-	background-image:url(/img/bgcolour.jpg);
 	background-size: contain;
 	/*height: 104px;*/
 }
@@ -44,6 +44,10 @@ p {
 	padding-top: 60px;
 	max-height: 0;
 	transition: 0.3s max-height ease-in-out;
+}
+
+nav .container {
+	padding:0;
 }
 
 .navigation.active {
@@ -183,6 +187,10 @@ p {
 	padding: 15px 15px 0;
 }
 
+.row .col img {
+	width:100%;
+}
+
 .row .col.thumbnail a {
 	position:relative;
 	display:block;
@@ -192,6 +200,7 @@ p {
 	padding:10px;
 	text-decoration: none;
 	color:white;
+	overflow:hidden;
 }
 
 .thumbnail-description {
@@ -217,6 +226,7 @@ p {
 
 .row .col.thumbnail a:hover .bgimg{
 	filter:brightness(0.5);
+	transform:scale(1.1);
 }
 
 /*ROW END*/
@@ -240,7 +250,27 @@ p {
 	}
 }
 
+/*Button*/
+.btn {
+	display:inline-block;
+	padding:15px 20px;
+	border:1px solid black;
+	text-decoration: none;
+}
+/*Button End*/
 
+.contact-list {
+	list-style: none;
+	max-width:400px;
+	width:100%;
+	margin:auto;
+}
+
+/*CUSTOM TARGETTING*/
 #Project .container {
-	padding: 40px 0;
+	text-align: center;
+}
+
+#Aboutme {
+	background-color: #f0f0f0;
 }
