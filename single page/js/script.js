@@ -31,12 +31,20 @@ document.addEventListener('DOMContentLoaded',function(){
 		})
 	}
 
-	var thumbnail = document.querySelectorAll('.thumbnail');
-	console.log(thumbnail);
-	for(var i = 0; i < thumbnail.length; i++){
-		console.log(thumbnail[i].offsetWidth)
-		thumbnail[i].style.height = thumbnail[i].offsetWidth + "px";
-	};
 
+	//Thumbnail
+
+	window.addEventListener('resize',function(){
+		resizeThumbnail();
+	})
+	resizeThumbnail();
+
+	function resizeThumbnail(){
+		var thumbnail = document.querySelectorAll('.thumbnail');
+
+		for(var i = 0; i < thumbnail.length; i++){
+			thumbnail[i].style.height = thumbnail[i].offsetWidth + "px";
+		};
+	}
 })
 
