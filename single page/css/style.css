@@ -16,6 +16,7 @@
 }
 
 
+
 /*NAVIGATION*/
 
 nav {
@@ -25,9 +26,6 @@ nav {
 	/*height: 104px;*/
 }
 
-h1 {
-	font-family: 
-}
 p {
 	font-size: 12px;
 	text-align: center;
@@ -200,6 +198,14 @@ p {
 	opacity:0;
 	transition:0.3s all ease-in-out;
 }
+.thumbnail-description h1{
+	padding-top: 60px;
+}
+
+.thumbnail-description p{
+	padding-top: 60px;
+}
+
 .row .col.thumbnail a .bgimg {
 	filter:brightness(1);
 	transition:0.3s all ease-in-out;
@@ -213,9 +219,8 @@ p {
 	filter:brightness(0.5);
 }
 
-
-
 /*ROW END*/
+
 @media screen and (min-width: 1024px){
 	.row {
 		flex-flow: row wrap;
@@ -233,4 +238,9 @@ p {
 	.row.one-col .col {
 		width:100%;
 	}
+}
+
+
+#Project .container {
+	padding: 40px 0;
 }
