@@ -28,7 +28,6 @@ nav {
 
 p {
 	font-size: 12px;
-	text-align: center;
 }
 
 .logo{
@@ -127,6 +126,7 @@ nav .container {
 }
 .slide p {
 	padding:50px 80px;
+	text-align: center;
 	color:white;
 }
 
@@ -261,7 +261,7 @@ nav .container {
 
 .contact-list {
 	list-style: none;
-	max-width:400px;
+	max-width: 275px;
 	width:100%;
 	margin:auto;
 }
@@ -273,4 +273,64 @@ nav .container {
 
 #Aboutme {
 	background-color: #f0f0f0;
+}
+
+.about-me-flex {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: space-between;
+}
+
+.about-me-flex .skill-set {
+	list-style:none;
+}
+
+.about-me-flex .skill-set .skill .img-wrapper,
+.about-me-flex .skill-set .skill .skill-description{
+	position:relative;
+	display:inline-block;
+	vertical-align: middle;
+	z-index: 1;
+}
+
+.about-me-flex .skill-set .img-wrapper img {
+	display:block;
+	width:50px;
+}
+
+.about-me-flex .skill-set .skill-description {
+	padding: 0 20px;
+}
+
+.about-me-flex .skill-set .skill {
+	position:relative;
+	background-color:lightgrey;
+	margin-bottom: 10px;
+}
+
+.about-me-flex .skill-set .skill .percentage {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:0;
+	height:100%;
+	transition:0.3s all ease-in-out;
+	background-color:orangered;
+	z-index: 0;
+}
+
+.about-me-flex .skill-set .skill:hover .percentage {
+	width:100%;
+}
+
+
+.about-me-flex .skill-set .skill:last-child {
+	margin-bottom: 0;
+}
+
+
+
+#Contact {
+	background-color: #f0f0f0 ;
 }

@@ -46,5 +46,20 @@ document.addEventListener('DOMContentLoaded',function(){
 			thumbnail[i].style.height = thumbnail[i].offsetWidth + "px";
 		};
 	}
+
+
+	// // Skill-set
+
+	// var skills = document.querySelectorAll('.skill');
+	// for(var i = 0; i < skills.length; i++){
+	// 	var skill = skills[i];
+
+	// 	skill.addEventListener('mouseover',function(){
+	// 		var percentage = this.getAttribute('data-percentage');
+	// 		var after = window.getComputedStyle(this,':after').getPropertyValue('width');
+	// 		console.log(after);
+	// 	})
+
+	// }
 })
 
