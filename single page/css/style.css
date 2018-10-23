@@ -8,6 +8,7 @@
 .container {
 	width: 100%;
 	max-width: 1024px;
+	padding: 40px 0;
 	margin: auto;
 }
 
@@ -16,21 +17,17 @@
 }
 
 
+
 /*NAVIGATION*/
 
 nav {
 	/*background-color: #ffcaca;*/
-	background-image:url(/img/bgcolour.jpg);
 	background-size: contain;
 	/*height: 104px;*/
 }
 
-h1 {
-	font-family: 
-}
 p {
 	font-size: 12px;
-	text-align: center;
 }
 
 .logo{
@@ -46,6 +43,10 @@ p {
 	padding-top: 60px;
 	max-height: 0;
 	transition: 0.3s max-height ease-in-out;
+}
+
+nav .container {
+	padding:0;
 }
 
 .navigation.active {
@@ -125,6 +126,7 @@ p {
 }
 .slide p {
 	padding:50px 80px;
+	text-align: center;
 	color:white;
 }
 
@@ -185,6 +187,10 @@ p {
 	padding: 15px 15px 0;
 }
 
+.row .col img {
+	width:100%;
+}
+
 .row .col.thumbnail a {
 	position:relative;
 	display:block;
@@ -194,12 +200,21 @@ p {
 	padding:10px;
 	text-decoration: none;
 	color:white;
+	overflow:hidden;
 }
 
 .thumbnail-description {
 	opacity:0;
 	transition:0.3s all ease-in-out;
 }
+.thumbnail-description h1{
+	padding-top: 60px;
+}
+
+.thumbnail-description p{
+	padding-top: 60px;
+}
+
 .row .col.thumbnail a .bgimg {
 	filter:brightness(1);
 	transition:0.3s all ease-in-out;
@@ -211,11 +226,11 @@ p {
 
 .row .col.thumbnail a:hover .bgimg{
 	filter:brightness(0.5);
+	transform:scale(1.1);
 }
 
-
-
 /*ROW END*/
+
 @media screen and (min-width: 1024px){
 	.row {
 		flex-flow: row wrap;
@@ -233,4 +248,89 @@ p {
 	.row.one-col .col {
 		width:100%;
 	}
+}
+
+/*Button*/
+.btn {
+	display:inline-block;
+	padding:15px 20px;
+	border:1px solid black;
+	text-decoration: none;
+}
+/*Button End*/
+
+.contact-list {
+	list-style: none;
+	max-width: 275px;
+	width:100%;
+	margin:auto;
+}
+
+/*CUSTOM TARGETTING*/
+#Project .container {
+	text-align: center;
+}
+
+#Aboutme {
+	background-color: #f0f0f0;
+}
+
+.about-me-flex {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: space-between;
+}
+
+.about-me-flex .skill-set {
+	list-style:none;
+}
+
+.about-me-flex .skill-set .skill .img-wrapper,
+.about-me-flex .skill-set .skill .skill-description{
+	position:relative;
+	display:inline-block;
+	vertical-align: middle;
+	z-index: 1;
+}
+
+.about-me-flex .skill-set .img-wrapper img {
+	display:block;
+	width:50px;
+}
+
+.about-me-flex .skill-set .skill-description {
+	padding: 0 20px;
+}
+
+.about-me-flex .skill-set .skill {
+	position:relative;
+	background-color:lightgrey;
+	margin-bottom: 10px;
+}
+
+.about-me-flex .skill-set .skill .percentage {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:0;
+	height:100%;
+	transition:0.3s all ease-in-out;
+	background-color:orangered;
+	z-index: 0;
+}
+
+.about-me-flex .skill-set .skill:hover .percentage {
+	width:100%;
+}
+
+
+.about-me-flex .skill-set .skill:last-child {
+	margin-bottom: 0;
+}
+
+
+
+#Contact {
+	background-color: #f0f0f0 ;
 }

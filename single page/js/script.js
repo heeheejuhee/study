@@ -31,12 +31,35 @@ document.addEventListener('DOMContentLoaded',function(){
 		})
 	}
 
-	var thumbnail = document.querySelectorAll('.thumbnail');
-	console.log(thumbnail);
-	for(var i = 0; i < thumbnail.length; i++){
-		console.log(thumbnail[i].offsetWidth)
-		thumbnail[i].style.height = thumbnail[i].offsetWidth + "px";
-	};
 
+	//Thumbnail
+
+	window.addEventListener('resize',function(){
+		resizeThumbnail();
+	})
+	resizeThumbnail();
+
+	function resizeThumbnail(){
+		var thumbnail = document.querySelectorAll('.thumbnail');
+
+		for(var i = 0; i < thumbnail.length; i++){
+			thumbnail[i].style.height = thumbnail[i].offsetWidth + "px";
+		};
+	}
+
+
+	// // Skill-set
+
+	// var skills = document.querySelectorAll('.skill');
+	// for(var i = 0; i < skills.length; i++){
+	// 	var skill = skills[i];
+
+	// 	skill.addEventListener('mouseover',function(){
+	// 		var percentage = this.getAttribute('data-percentage');
+	// 		var after = window.getComputedStyle(this,':after').getPropertyValue('width');
+	// 		console.log(after);
+	// 	})
+
+	// }
 })
 
