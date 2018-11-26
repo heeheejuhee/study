@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Homework</title>
+	<style>
+		body{
+			background-color: #e3e3e3;
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+			cursor: pointer;
+		}
+		.popup {
+			position: relative;
+			/*margin-top: 50%;*/
+			display: inline-block;
+			cursor: pointer;
+
+		}
+		.popup .popupsentence {
+			position: absolute;
+			text-align: center;
+			font-size: 13px;
+			width: 200px;
+			padding: 8px 0;
+			background-color: #555;
+			color: whitesmoke;
+			border-radius: 6px;
+			right: -26%;
+			/*visibility: hidden;*/
+		}
+		.popup .show {
+			visibility: visible;
+			animation: fadeIn 2s;
+		}
+
+		@keyframes fadeIn {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<h3>2018.11.22</h3>
+	<div class="popup" onclick="clickFunction()">사랑하는 오빠에게	
+		<div class="popupsentence" id="mypopup">예쁘고 귀여운 저를 많이 이해해주고 사랑해줘서 정말 고마워요♡ <br>오빠한테 자랑스러운 사람이 될게요. 저 가르쳐줘서 감사합니다:) <br>나는 정말로 오빠 많이 사랑해요. 사랑해요 오빠</div>
+	</div>
+
+
+	<!-- 1) 사랑하는오빠에게 밑에 띄우는법 -->
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script>
+		// function clickFunction() {
+		// 	var popup = document.getElementById('mypopup');
+		// 	popup.classList.toggle('show');
+		// }
+
+
+		$(document).ready(function(){
+    		$(".popup").click(function(){
+        		$("#mypopup").toggle();
+    		});
+		}); // visibility:hidden을 없애야지만 가능/첨부터 내용이 보여져요 // fadeToffle is not a function
+
+		//memo : .fadeToggle([duration],[easing],[complete]) 제이쿼리에서 effect 여러개 넣는거 불가능
+		// toggle().fadeIn() X
+	</script>
+
+</body>
+</html>
